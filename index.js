@@ -1,22 +1,50 @@
-fetch("https://www.themealdb.com/api/json/v1/1/categories.php")
-.then(resp => resp.json())
-.then (data =>  {
+function GetCategories(){
+    fetch("https://www.themealdb.com/api/json/v1/1/categories.php")
+        .then(resp => resp.json())
+        .then((item)=>{
+           // console.log(item);
+            item.categories.forEach(obj => {
+                let categoriesMenu = document.getElementById("typesmeals")
+                let liCategories = document.createElement("li")
+                let imageCategories = document.createElement("img")
+                let categoryDescription = document.createElement("p")
+        
+                liCategories.innerText = obj.strCategory
+                imageCategories.src = obj.strCategoryThumb
+                categoryDescription.innerText = obj.strCategoryDescription
 
-    data.forEach(obj => {
-        let categoriesMenu = document.getElementById("typesmeals")
-        let liCategories = document.createElement("li")
-        let imageCategories = document.createElement("img")
+                //console.log(data.strCategory)
+        
+                categoriesMenu.appendChild(liCategories)
+                categoriesMenu.appendChild(imageCategories)
+                categoriesMenu.appendChild(categoryDescription)
+        
+            })
+        })
+}
 
-        liCategories.innerText = obj.strCategory
-        imageCategories.src = obj.strCategoryThumb
-        console.log(data.strCategory)
+GetCategories()
+// .then(data =>  {
+//     console.log(data);
+//     data.forEach(item => {
+//         console.log(item)
+//         //meals.appendChild(areaUsed)
+//     })
+    // data.forEach(obj => {
+    //     let categoriesMenu = document.getElementById("typesmeals")
+    //     let liCategories = document.createElement("li")
+    //     let imageCategories = document.createElement("img")
 
-        categoriesMenu.appendChild(liCategories)
-        categoriesMenu.appendChild(imageCategories)
+    //     liCategories.innerText = obj.strCategory
+    //     imageCategories.src = obj.strCategoryThumb
+    //     console.log(data.strCategory)
 
-    })
-    // console.log(data)
-})
+    //     categoriesMenu.appendChild(liCategories)
+    //     categoriesMenu.appendChild(imageCategories)
+
+    // })
+//     // console.log(data)
+// })
 
 
 fetch("http://localhost:3000/meals")
@@ -47,7 +75,16 @@ fetch("http://localhost:3000/meals")
         meals.appendChild(imageMeals)
         meals.appendChild(instructions)
         //meals.appendChild(areaUsed)
-    });
+    })
+
+    const searchBtn = document.getElementById("search")
+    const listSearchFoods = document.createElement("li")
+    
+    searchBtn.addEventListener("click", () => {
+        const liMeals = document.createElement("li")
+        liMeals.innerText = `${item.strMeal}`
+    })
+    
 
 
 })

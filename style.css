@@ -1,19 +1,24 @@
 #container {
     text-align: center;
-    margin: 100px;
+    margin: 20px;
     font-family: 'Chivo Mono', monospace;
-    padding: 5px;
     font-size: larger;
     font-weight: 100;
     display: flex;
+    color: white;
 
 }
 
 body{
-    background-size: auto;
-
+    font-family: 'Chivo Mono', monospace;
+    background-image: url("https://images.unsplash.com/photo-1483137140003-ae073b395549?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
 }
 
-.categories li{
-    border-radius: 360;
+.type-meals img{
+    border-radius: 100%;
+    display: flex;
+    flex-direction: row-reverse;
 }
