@@ -1,0 +1,19 @@
+#container {
+    text-align: center;
+    margin: 100px;
+    font-family: 'Chivo Mono', monospace;
+    padding: 5px;
+    font-size: larger;
+    font-weight: 100;
+    display: flex;
+
+}
+
+body{
+    background-size: auto;
+
+}
+
+.categories li{
+    border-radius: 360;
+}
