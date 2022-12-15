@@ -1,6 +1,8 @@
-.navbar {
+ .navbar {
     max-width: var(--max-width);
     width: 90vw;
+    background-color: black;
+    color: #000;
 }
 
 
@@ -10,22 +12,24 @@
     box-shadow: 0 0 10px 2px #3333331a;
     border-radius: 3px;
     overflow: hidden;
-    width: 400px;
 }
 
 body{
     font-family: 'Chivo Mono', monospace;
+
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("data:image/jpeg;base64,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");
+    background-image: url("https://img.freepik.com/free-vector/abstract-white-shapes-background_79603-1362.jpg?size=626&ext=jpg&ga=GA1.2.1429756655.1670586158");
+}
+
+#allmeals{
+    color: #000;
 }
 
 #categories-container{
-    background-color: #A599B5;
-    padding: 1rem;
     text-align: center;
     width: auto;
-    
+    color: #000;
 }
 
 .type-meals{
@@ -34,7 +38,6 @@ body{
     flex-direction: row;
     height: 100px;
     width: 100px;
-    
 }
 
 
@@ -58,6 +61,7 @@ input{
     display: grid;
     grid-template-columns: repeat(auto-fil, minmax(150px, 1fr));
     margin-top: 1rem;
+    color: #000;
 }
 
 .cards{
@@ -66,15 +70,9 @@ input{
     padding: .5rem;
 }
 
-.card > .header{
-    margin-bottom: .25rem;
-}
-
-.card > .body {
-    font-size: .8rem;
-    color: #777;
-}
 
 .hide {
     display: none;
-}
+} 
+
+
