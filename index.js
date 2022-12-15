@@ -7,17 +7,16 @@ function GetCategories(){
                 let categoriesMenu = document.getElementById("typesmeals")
                 let liCategories = document.createElement("li")
                 let imageCategories = document.createElement("img")
-                let categoryDescription = document.createElement("p")
+
         
                 liCategories.innerText = obj.strCategory
                 imageCategories.src = obj.strCategoryThumb
-                categoryDescription.innerText = obj.strCategoryDescription
+
 
                 //console.log(data.strCategory)
         
                 categoriesMenu.appendChild(liCategories)
                 categoriesMenu.appendChild(imageCategories)
-                categoriesMenu.appendChild(categoryDescription)
         
             })
         })
@@ -47,11 +46,11 @@ GetCategories()
 // })
 
 
-fetch("http://localhost:3000/meals")
+fetch("https://www.themealdb.com/api/json/v1/1/search.php?s")
 .then (resp => resp.json())
 .then (data => {
 
-    data.forEach(item => {
+    data.meals.forEach(item => {
         // console.log(item)
         const meals = document.getElementById("meals")
         const liMeals = document.createElement("li")
@@ -77,14 +76,21 @@ fetch("http://localhost:3000/meals")
         //meals.appendChild(areaUsed)
     })
 
-    const searchBtn = document.getElementById("search")
-    const listSearchFoods = document.createElement("li")
-    
-    searchBtn.addEventListener("click", () => {
-        const liMeals = document.createElement("li")
-        liMeals.innerText = `${item.strMeal}`
-    })
-    
+})
 
+const searchBtn = document.getElementsByClassName("btn btn-outline-success")
+
+fetch("https://www.themealdb.com/api/json/v1/1/search.php?s")
+.then(resp => resp.json())
+.then (data => {
+  
+    const liSearch = document.createElement("li")
+    const imageSearch = document.createElement("img")
+    const instructionSearch = document.createElement("p")
+
+
+    liSearch.innerText = data.strMeal
+    imageSearch.src = data.strMealThumb
+    instructionSearch.innerText = data.strInstructions
 
 })
