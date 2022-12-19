@@ -14,11 +14,8 @@
 <body>
 
   <section>
-    <nav class="navbar navbar-dark bg-dark">
-      <!-- Navbar content -->
-    </nav>
-
-      <nav class="navbar navbar-expand-lg bg-light">
+  
+      <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">ALL MEALS</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
@@ -33,10 +30,12 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">Link</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
-              </li>
-            </ul>
+              </ul>
+              <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+                <div id="myDropdown" class="dropdown-content">
+                </div>
+              </div>
             <form id="searchForm" role="search">
               <input id="searchItem" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success" id="searchBtn" type="submit">Search</button>
@@ -53,7 +52,24 @@
         </div>
       </nav>
     </nav>
+  </nav>
     <section>
+      <form>
+        <div class="mb-3">LOGIN DETAILS
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form><br>
       <!-- <form action="text">Log In 
                 <input type="text" name="" id="">
             <button> </button>
@@ -71,6 +87,14 @@
       <div>
         <ul id="meals" class="more-meals"></ul>
       </div>
+    </section>
+
+          <!-- FOOTER -->
+    <section class="footer1">
+      <p class="pp1">Feedback Section</p>
+      <p>All Feedback are welcome</p> <br>
+      <button class="btn" href="#">Post Feedback</button>
+      <p class="pplast"></p>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"

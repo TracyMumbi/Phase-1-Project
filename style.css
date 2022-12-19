@@ -1,8 +1,6 @@
- .navbar {
-    max-width: var(--max-width);
-    width: 90vw;
-    background-color: black;
-    color: #000;
+.navbar{
+    background-color: #fff;
+    color: #fff;
 }
 
 
@@ -12,39 +10,67 @@
     box-shadow: 0 0 10px 2px #3333331a;
     border-radius: 3px;
     overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    
 }
 
 body{
     font-family: 'Chivo Mono', monospace;
-
+    color: #000;
+    font-size: x-large;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("https://img.freepik.com/free-vector/abstract-white-shapes-background_79603-1362.jpg?size=626&ext=jpg&ga=GA1.2.1429756655.1670586158");
+    background-image: url("https://i.pinimg.com/originals/bd/1f/5b/bd1f5b6209201305e6a6ef0bb82a8746.jpg");
+}
+.mb-3{
+    background-color: #fff;
+    font-family: 'Chivo Mono', monospace;
+    font-size: x-large;
 }
 
+
 #allmeals{
-    color: #000;
+    color: #654F6F;
 }
 
 #categories-container{
     text-align: center;
     width: auto;
     color: #000;
+    display: flex;
+    flex-wrap: wrap
 }
 
 .type-meals{
-    border-radius: 100%;
+    /* border-radius: 100%; */
     display: flex;
     flex-direction: row;
-    height: 100px;
-    width: 100px;
+    height: 250px;
+    width: 100vw;
+    overflow-x: scroll;
+    color: #654F6F;
+}
+.type-meals::-webkit-scrollbar {
+    width: 0px;
+}
+.type-meals div{
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+
 }
 
 
-.type-meals li img{
+.type-meals div img{
     object-fit: cover;
-    height: 50px;
-    width: 50px;
+    height: 100px;
+    width: 100px;
+    clip-path: circle();
+    display: flex;
+    flex-wrap: wrap
 }
 
 #searchForm {
@@ -61,7 +87,7 @@ input{
     display: grid;
     grid-template-columns: repeat(auto-fil, minmax(150px, 1fr));
     margin-top: 1rem;
-    color: #000;
+    color: #654F6F;
 }
 
 .cards{
@@ -74,5 +100,50 @@ input{
 .hide {
     display: none;
 } 
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}
 
 
