@@ -1,3 +1,4 @@
+// waits for the page to load so as to display
 document.addEventListener("DOMContentLoaded", (event) => {
     //   console.log("DOM fully loaded and parsed");
   
@@ -6,6 +7,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   });
   
   function GetCategories() {
+    //fetches all the categories from the api and displays the image and the name
     fetch("https://www.themealdb.com/api/json/v1/1/categories.php")
       .then((resp) => resp.json())
       .then((item) => {
@@ -15,11 +17,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
           let imageCategories = document.createElement("img");
           let mealDiv = document.createElement("div")
   
+          //assign the value to the variable stated above
           liCategories.innerText = obj.strCategory;
           imageCategories.src = obj.strCategoryThumb;
   
           //console.log(data.strCategory)
-  
+          //appending it to the mealDiv so that it can be its container
           mealDiv.appendChild(imageCategories);
           mealDiv.appendChild(liCategories);
 
@@ -27,17 +30,18 @@ document.addEventListener("DOMContentLoaded", (event) => {
         });
       });
   }
-  
+  //
   let searchBtnForm = document.getElementById("searchForm");
   
   searchBtnForm.addEventListener("submit", (e) => {
     e.preventDefault()
     let searchItem = document.getElementById("searchItem").value;
     const result = capitalizeFirstLetter(searchItem);
+    //fetching all meals from the api so that when searched it can display what is searched
     fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=" + result)
       .then((resp) => resp.json())
       .then((data) => {
-       // hideLoading()
+       //when the searched item is not found it displays "No data found"
         if (data.meals == null) {
           alert("No data found");
         } else {
@@ -53,11 +57,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
     return capitalized;
   }
   
-  
-  fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=Big mac")
+  //used the local api to fetch the data so that i can POST additional data to my site
+ // fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=Big mac")
+ fetch("http://localhost:3000/meals")
   .then((resp) => resp.json())
     .then((data) => {
-      data.meals.forEach((item) => {
+      //data.meals.forEach((item) => {
+      data.forEach((item) => {
         setToHtml(item,false);
       });
     });
@@ -114,6 +120,30 @@ document.addEventListener("DOMContentLoaded", (event) => {
   // submitBtn.addEventListener("click",() => {
     
   // })
+// code for posting the recipe that will be added
+let newRecipe = document.getElementById("character-form");
+let newInputs = document.querySelectorAll("#character-form div");
+let nameInput = newInputs[0].childNodes[3];
+let imageUrl = newInputs[1].childNodes[3];
+console.log(nameInput.value)
+
+newRecipe.addEventListener("submit", (e) => {
+    e.preventDefault();
+    //used the local api
+    fetch(`http://localhost:3000/meals`, {
+        method: "POST",
+        body: JSON.stringify({
+            "id": Math.round(Math.random() * 2.5),
+            "strMeal": `${nameInput.value}`,
+            "strMealThumb": `${imageUrl.value}`,
+            "strArea": "",
+            "strInstructions": "Have fun cooking",
+        }),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+})
 
 
 

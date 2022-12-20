@@ -24,7 +24,8 @@ server</a> extension.</li> </ul>
 and clone this repository in to your computer</li> <li>Open the project-folder
 using VS code.</li> <li>Click on <strong>Go Live</strong> at the bottom right of
 the VS code window.<br>This will open your default browser and display the
-contents of the <strong>index.html</strong>.<br></li> <li>Open a terminal and navigate to the project
+contents of the <strong>index.html</strong>.<li>Run <strong>json-server --watch
+db.json</strong> or <strong>json-server lib.json</strong>in the terminal<br></li> <li>Open a terminal and navigate to the project
 directory. ie.".../phase-1-project"</li>
 <br>
 <h3>Navigating through the project</h3>
@@ -51,7 +52,7 @@ You should have regular git commits and the commit messages should be clear and 
 
 ## RECIPE APP
 ### INTRODUCTION
-The recipe app is used by anybody who wants to cook and doesn't really know how to cook or even the steps on how to cook specific foods.<br>This app provides the user with a search functionality where they can search the specific food that they would want, then it provide him/her with the food searched together with a picture of the food and also clear instructions on how to make the food.<br>
+The recipe app is used by anybody who wants to cook and doesn't really know how to cook or even the steps on how to cook specific foods.<br>This app provides the user with a search functionality where they can search the specific food that they would want, then it provide him/her with the food searched together with a picture of the food and also clear instructions on how to make the food.<br>It also provides the user with a button where you can add your recipe to the site
 
 Use <a href = "https://tracymumbi.github.io/Phase-1-Project/">this </a> to get the deployed site
 

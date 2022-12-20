@@ -12,7 +12,9 @@ Solution
 Create an online application that allows users to get recipes for the different types of foods
 
 MVP 
-
+Search for a recipe
+Add a recipe 
+Display different recipes with their images and instructions
 
 API URL
 https://www.themealdb.com/api.php

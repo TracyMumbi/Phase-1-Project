@@ -1,5 +1,5 @@
 .navbar{
-    background-color: #383F51; 
+    background-color: #727D71; 
 }
 
 
@@ -11,7 +11,7 @@
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
-
+    /* background-color: #CDE6F5;  */
 }
 
 body{
@@ -19,18 +19,18 @@ body{
     font-size: x-large;
     background-size: cover;
     background-repeat: no-repeat;
-
+    /* background-color: #CDE6F5;  */
     color: #000;
 }
 .mb-3{
     font-family: 'Chivo Mono', monospace;
     font-size: x-large;
-
+    /* background-color: #CDE6F5;  */
     color: #000;
 }
 
 .form-control{
-
+    /* background-color: #CDE6F5;  */
     color: #000;
 }
 
@@ -41,7 +41,15 @@ body{
     color: #000;
     display: flex;
     flex-wrap: wrap;
+    /* background-color: #CDE6F5;  */
+}
 
+.btn{
+    background-color: #727D71;
+}
+
+#searchBtn{
+    background-color: #727D71;
 }
 
 .type-meals{
@@ -88,7 +96,7 @@ body{
     border-radius: 16px;
     padding: 32px 24px;
     color: #000;
-    background-color: #383F51; 
+    background-color: #727D71; 
     box-shadow:
   1.2px 1.4px 7.2px rgba(0, 0, 0, 0.063),
   2.9px 3.4px 20.8px rgba(0, 0, 0, 0.095),
