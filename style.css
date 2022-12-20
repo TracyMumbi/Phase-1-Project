@@ -1,6 +1,5 @@
 .navbar{
-    background-color: #506C64;
-
+    background-color: #fff;
 }
 
 
@@ -12,6 +11,7 @@
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
+    /* background-color: #506C64; */
     
 }
 
@@ -20,9 +20,10 @@ body{
     font-size: x-large;
     background-size: cover;
     background-repeat: no-repeat;
+    background-color: #506C64;
 }
 .mb-3{
-    background-color: #fff;
+    background-color: #AEA3B0;
     font-family: 'Chivo Mono', monospace;
     font-size: x-large;
 }
@@ -50,6 +51,7 @@ body{
 .type-meals::-webkit-scrollbar {
     width: 0px;
 }
+
 .type-meals div{
     margin: 0 1rem;
     display: flex;
@@ -78,6 +80,7 @@ body{
     background-color: #fff;
     border-radius: 16px;
     padding: 32px 24px;
+    background-color: rgb(49, 109, 179);
     box-shadow:
   1.2px 1.4px 7.2px rgba(0, 0, 0, 0.063),
   2.9px 3.4px 20.8px rgba(0, 0, 0, 0.095),
@@ -88,3 +91,6 @@ body{
 ;
     margin: 0 16px;
 }
+
+
+
