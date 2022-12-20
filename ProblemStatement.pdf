@@ -1,0 +1,22 @@
+Project Owner: Tracy Mumbi Naomi
+Project Name: Recipe app
+
+
+Problem Statement
+
+Many people have always wanted to know how to cook specific foods and also learn diffent recipes for different foods. The pandemic also made many people to venture into learning how to cook and also to how to bake. But the question for most of them was "How will I start?", or "How am I supposed to know how to cook this?"
+This website provides people with the necessities to start on their new journey to become would class chefs. It provides the user with the recipes for the type of food that they would want to cook.
+it also has instructions for cooking the specific mealDiv
+
+Solution 
+Create an online application that allows users to get recipes for the different types of foods
+
+MVP 
+
+
+API URL
+https://www.themealdb.com/api.php
+
+
+Github Link 
+https://tracymumbi.github.io/Phase-1-Project/
