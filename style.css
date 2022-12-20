@@ -1,18 +1,17 @@
 .navbar{
-    background-color: #fff;
+    background-color: #383F51; 
 }
 
 
 
 #container {
-    background-color: #fff;
+    color: #000;
     box-shadow: 0 0 10px 2px #3333331a;
     border-radius: 3px;
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
-    /* background-color: #506C64; */
-    
+
 }
 
 body{
@@ -20,15 +19,20 @@ body{
     font-size: x-large;
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: #506C64;
+
+    color: #000;
 }
 .mb-3{
-    background-color: #AEA3B0;
     font-family: 'Chivo Mono', monospace;
     font-size: x-large;
+
+    color: #000;
 }
 
+.form-control{
 
+    color: #000;
+}
 
 
 #categories-container{
@@ -36,7 +40,8 @@ body{
     width: auto;
     color: #000;
     display: flex;
-    flex-wrap: wrap
+    flex-wrap: wrap;
+
 }
 
 .type-meals{
@@ -46,6 +51,7 @@ body{
     height: 250px;
     width: 100vw;
     overflow-x: scroll;
+    color: #000;
 
 }
 .type-meals::-webkit-scrollbar {
@@ -58,7 +64,7 @@ body{
     flex-direction: column;
     justify-items: center;
     align-items: center;
-
+    color: #000;
 }
 
 
@@ -69,6 +75,7 @@ body{
     clip-path: circle();
     display: flex;
     flex-wrap: wrap
+
 }
 
 #meals img {
@@ -77,10 +84,11 @@ body{
     border-radius: 9px;
 }
 #meals{
-    background-color: #fff;
+    background-color: #000;
     border-radius: 16px;
     padding: 32px 24px;
-    background-color: rgb(49, 109, 179);
+    color: #000;
+    background-color: #383F51; 
     box-shadow:
   1.2px 1.4px 7.2px rgba(0, 0, 0, 0.063),
   2.9px 3.4px 20.8px rgba(0, 0, 0, 0.095),
