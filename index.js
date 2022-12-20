@@ -79,8 +79,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     imageMeals.src = item.strMealThumb;
     instructions.innerText = item.strInstructions;
     // areaUsed.innerText = item.strArea
-    imageMeals.style.width = "100%";
-    imageMeals.height = 750;
+    // imageMeals.style.width = "100%";
+    // imageMeals.height = 750;
     imageMeals.style.objectFit = "cover";
     // console.log(data.strMeal)
   
@@ -108,3 +108,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
       }
     }
   }
+
+  // let submitBtn = document.getElementsByClassName("btn btn-primary")
+
+  // submitBtn.addEventListener("click",() => {
+    
+  // })
+
+
+
